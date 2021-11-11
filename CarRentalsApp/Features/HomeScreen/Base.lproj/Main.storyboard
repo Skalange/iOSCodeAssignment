@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarRentalsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELB-QZ-xvR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNJ-DW-S5F">
+                                        <rect key="frame" x="181.5" y="52" width="51.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12180397727272728" green="0.66480004370629375" blue="0.77876420454545459" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yNJ-DW-S5F" firstAttribute="centerY" secondItem="ELB-QZ-xvR" secondAttribute="centerY" id="X8U-i0-vA1"/>
+                                    <constraint firstItem="yNJ-DW-S5F" firstAttribute="centerX" secondItem="ELB-QZ-xvR" secondAttribute="centerX" id="qlA-Qe-Wpv"/>
+                                    <constraint firstAttribute="height" constant="128" id="riz-e7-umL"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zAx-EK-Ph6">
+                                <rect key="frame" x="0.0" y="128" width="414" height="454"/>
+                            </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LxF-kS-C7D" customClass="CarDetailCollectionView" customModule="CarRentalsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="582" width="414" height="270"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="BH3-Dd-h1i"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wnx-QG-gzq">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sG2-KV-HHd">
+                                        <rect key="frame" x="5" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gug-Ln-uUc">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LxF-kS-C7D" secondAttribute="trailing" id="7ip-97-zTD"/>
+                            <constraint firstItem="ELB-QZ-xvR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KIb-b8-D5p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ELB-QZ-xvR" secondAttribute="trailing" id="LLb-OX-H6T"/>
+                            <constraint firstItem="ELB-QZ-xvR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M0h-g2-Jrx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zAx-EK-Ph6" secondAttribute="trailing" id="Mte-X7-c1G"/>
+                            <constraint firstItem="LxF-kS-C7D" firstAttribute="top" secondItem="zAx-EK-Ph6" secondAttribute="bottom" id="Npw-4x-NW0"/>
+                            <constraint firstItem="LxF-kS-C7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ta6-kW-WhU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LxF-kS-C7D" secondAttribute="bottom" constant="10" id="TzB-nd-HjX"/>
+                            <constraint firstItem="zAx-EK-Ph6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VeI-0w-1Ty"/>
+                            <constraint firstItem="zAx-EK-Ph6" firstAttribute="top" secondItem="ELB-QZ-xvR" secondAttribute="bottom" id="Y0l-do-dcG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carInfoCollectionView" destination="LxF-kS-C7D" id="lKd-aF-N6b"/>
+                        <outlet property="carMapView" destination="zAx-EK-Ph6" id="hdh-v9-UD1"/>
+                        <outlet property="titleLabel" destination="yNJ-DW-S5F" id="4uS-9f-EsK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

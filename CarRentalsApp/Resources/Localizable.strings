@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  CarRentalsApp
+
+  Created by Sonali Kalange on 11/11/21.
+  
+*/
+
+"reserve_car_popup_title" = "Reservation successful";
+"reserve_car_popup_message" = "Car reserved successfully. We will send the details to your registered number shortly";
+"ok_title" = "Ok";
+"location_details_loader_message" = "Fetching location details. Please wait..";
+"error_coordinate_popup_title" = "Error";
+"error_coordinate_popup_message" = "We are unable to fetch the location information currently. Please try again later";
