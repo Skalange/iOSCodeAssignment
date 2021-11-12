@@ -13,8 +13,6 @@
 		B90F42A0273C2EA600AC99DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90F429E273C2EA600AC99DD /* Main.storyboard */; };
 		B90F42A2273C2EA700AC99DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90F42A1273C2EA700AC99DD /* Assets.xcassets */; };
 		B90F42A5273C2EA700AC99DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90F42A3273C2EA700AC99DD /* LaunchScreen.storyboard */; };
-		B90F42BA273C2EA700AC99DD /* CarRentalsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42B9273C2EA700AC99DD /* CarRentalsAppUITests.swift */; };
-		B90F42BC273C2EA700AC99DD /* CarRentalsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42BB273C2EA700AC99DD /* CarRentalsAppUITestsLaunchTests.swift */; };
 		B90F42D0273C2F1500AC99DD /* CarDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42CF273C2F1500AC99DD /* CarDetailsUseCase.swift */; };
 		B90F42D2273C2F2000AC99DD /* CarDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42D1273C2F2000AC99DD /* CarDetailsModel.swift */; };
 		B90F42D4273C2F2E00AC99DD /* CarDetailsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42D3273C2F2E00AC99DD /* CarDetailsCellModel.swift */; };
@@ -29,8 +27,6 @@
 		B90F42E7273C2FB600AC99DD /* DataTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42E6273C2FB600AC99DD /* DataTypeExtension.swift */; };
 		B90F42EA273C319000AC99DD /* Test-vehicles_data.json in Resources */ = {isa = PBXBuildFile; fileRef = B90F42E9273C319000AC99DD /* Test-vehicles_data.json */; };
 		B90F42ED273C456F00AC99DD /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42EC273C456F00AC99DD /* CustomAnnotation.swift */; };
-		B90F42EF273CD8C500AC99DD /* CustomAnnotationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42EE273CD8C500AC99DD /* CustomAnnotationPopUp.swift */; };
-		B90F42F1273CD8D600AC99DD /* CustomAnnotationPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90F42F0273CD8D600AC99DD /* CustomAnnotationPopUp.xib */; };
 		B90F42F3273CDB8000AC99DD /* AnnotationPopUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42F2273CDB8000AC99DD /* AnnotationPopUpModel.swift */; };
 		B90F42F6273D6EF800AC99DD /* MainViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F42F5273D6EF800AC99DD /* MainViewTest.swift */; };
 		B90F42F8273D7E0F00AC99DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B90F42F7273D7E0F00AC99DD /* Localizable.strings */; };
@@ -40,13 +36,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		B90F42AC273C2EA700AC99DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B90F428D273C2EA600AC99DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B90F4294273C2EA600AC99DD;
-			remoteInfo = CarRentalsApp;
-		};
-		B90F42B6273C2EA700AC99DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B90F428D273C2EA600AC99DD /* Project object */;
 			proxyType = 1;
@@ -65,9 +54,6 @@
 		B90F42A4273C2EA700AC99DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B90F42A6273C2EA700AC99DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B90F42AB273C2EA700AC99DD /* CarRentalsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRentalsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B90F42B5273C2EA700AC99DD /* CarRentalsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRentalsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B90F42B9273C2EA700AC99DD /* CarRentalsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalsAppUITests.swift; sourceTree = "<group>"; };
-		B90F42BB273C2EA700AC99DD /* CarRentalsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentalsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B90F42CF273C2F1500AC99DD /* CarDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsUseCase.swift; sourceTree = "<group>"; };
 		B90F42D1273C2F2000AC99DD /* CarDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsModel.swift; sourceTree = "<group>"; };
 		B90F42D3273C2F2E00AC99DD /* CarDetailsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsCellModel.swift; sourceTree = "<group>"; };
@@ -82,8 +68,6 @@
 		B90F42E6273C2FB600AC99DD /* DataTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeExtension.swift; sourceTree = "<group>"; };
 		B90F42E9273C319000AC99DD /* Test-vehicles_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Test-vehicles_data.json"; sourceTree = "<group>"; };
 		B90F42EC273C456F00AC99DD /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
-		B90F42EE273CD8C500AC99DD /* CustomAnnotationPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationPopUp.swift; sourceTree = "<group>"; };
-		B90F42F0273CD8D600AC99DD /* CustomAnnotationPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAnnotationPopUp.xib; sourceTree = "<group>"; };
 		B90F42F2273CDB8000AC99DD /* AnnotationPopUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPopUpModel.swift; sourceTree = "<group>"; };
 		B90F42F5273D6EF800AC99DD /* MainViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTest.swift; sourceTree = "<group>"; };
 		B90F42F7273D7E0F00AC99DD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -106,13 +90,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B90F42B2273C2EA700AC99DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,7 +98,6 @@
 			children = (
 				B90F4297273C2EA600AC99DD /* CarRentalsApp */,
 				B90F42AE273C2EA700AC99DD /* CarRentalsAppTests */,
-				B90F42B8273C2EA700AC99DD /* CarRentalsAppUITests */,
 				B90F4296273C2EA600AC99DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,7 +107,6 @@
 			children = (
 				B90F4295273C2EA600AC99DD /* CarRentalsApp.app */,
 				B90F42AB273C2EA700AC99DD /* CarRentalsAppTests.xctest */,
-				B90F42B5273C2EA700AC99DD /* CarRentalsAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,15 +135,6 @@
 				B90F42F9273D7E7D00AC99DD /* DataTypeExtensionTest.swift */,
 			);
 			path = CarRentalsAppTests;
-			sourceTree = "<group>";
-		};
-		B90F42B8273C2EA700AC99DD /* CarRentalsAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B90F42B9273C2EA700AC99DD /* CarRentalsAppUITests.swift */,
-				B90F42BB273C2EA700AC99DD /* CarRentalsAppUITestsLaunchTests.swift */,
-			);
-			path = CarRentalsAppUITests;
 			sourceTree = "<group>";
 		};
 		B90F42C8273C2EAC00AC99DD /* Features */ = {
@@ -261,8 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				B90F42EC273C456F00AC99DD /* CustomAnnotation.swift */,
-				B90F42EE273CD8C500AC99DD /* CustomAnnotationPopUp.swift */,
-				B90F42F0273CD8D600AC99DD /* CustomAnnotationPopUp.xib */,
 			);
 			path = MapAnnotations;
 			sourceTree = "<group>";
@@ -313,24 +277,6 @@
 			productReference = B90F42AB273C2EA700AC99DD /* CarRentalsAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B90F42B4273C2EA700AC99DD /* CarRentalsAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B90F42C5273C2EA700AC99DD /* Build configuration list for PBXNativeTarget "CarRentalsAppUITests" */;
-			buildPhases = (
-				B90F42B1273C2EA700AC99DD /* Sources */,
-				B90F42B2273C2EA700AC99DD /* Frameworks */,
-				B90F42B3273C2EA700AC99DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B90F42B7273C2EA700AC99DD /* PBXTargetDependency */,
-			);
-			name = CarRentalsAppUITests;
-			productName = CarRentalsAppUITests;
-			productReference = B90F42B5273C2EA700AC99DD /* CarRentalsAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,10 +291,6 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					B90F42AA273C2EA700AC99DD = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = B90F4294273C2EA600AC99DD;
-					};
-					B90F42B4273C2EA700AC99DD = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = B90F4294273C2EA600AC99DD;
 					};
@@ -369,7 +311,6 @@
 			targets = (
 				B90F4294273C2EA600AC99DD /* CarRentalsApp */,
 				B90F42AA273C2EA700AC99DD /* CarRentalsAppTests */,
-				B90F42B4273C2EA700AC99DD /* CarRentalsAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -381,7 +322,6 @@
 			files = (
 				B90F42D9273C2F5100AC99DD /* CarDetailCollectionViewCell.xib in Resources */,
 				B90F42A5273C2EA700AC99DD /* LaunchScreen.storyboard in Resources */,
-				B90F42F1273CD8D600AC99DD /* CustomAnnotationPopUp.xib in Resources */,
 				B90F42F8273D7E0F00AC99DD /* Localizable.strings in Resources */,
 				B90F42A2273C2EA700AC99DD /* Assets.xcassets in Resources */,
 				B90F42A0273C2EA600AC99DD /* Main.storyboard in Resources */,
@@ -396,13 +336,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B90F42B3273C2EA700AC99DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -410,7 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90F42EF273CD8C500AC99DD /* CustomAnnotationPopUp.swift in Sources */,
 				B90F42DB273C2F6100AC99DD /* CarDetailDataSource.swift in Sources */,
 				B90F42E7273C2FB600AC99DD /* DataTypeExtension.swift in Sources */,
 				B90F42FC273D95FE00AC99DD /* PopUpView.swift in Sources */,
@@ -440,15 +372,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B90F42B1273C2EA700AC99DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B90F42BA273C2EA700AC99DD /* CarRentalsAppUITests.swift in Sources */,
-				B90F42BC273C2EA700AC99DD /* CarRentalsAppUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -456,11 +379,6 @@
 			isa = PBXTargetDependency;
 			target = B90F4294273C2EA600AC99DD /* CarRentalsApp */;
 			targetProxy = B90F42AC273C2EA700AC99DD /* PBXContainerItemProxy */;
-		};
-		B90F42B7273C2EA700AC99DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B90F4294273C2EA600AC99DD /* CarRentalsApp */;
-			targetProxy = B90F42B6273C2EA700AC99DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -613,6 +531,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,7 +543,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -641,6 +560,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -652,7 +572,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -706,52 +626,6 @@
 			};
 			name = Release;
 		};
-		B90F42C6273C2EA700AC99DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BVH2MA3VH7;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.database.app.CarRentalsAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CarRentalsApp;
-			};
-			name = Debug;
-		};
-		B90F42C7273C2EA700AC99DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BVH2MA3VH7;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.database.app.CarRentalsAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CarRentalsApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -778,15 +652,6 @@
 			buildConfigurations = (
 				B90F42C3273C2EA700AC99DD /* Debug */,
 				B90F42C4273C2EA700AC99DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B90F42C5273C2EA700AC99DD /* Build configuration list for PBXNativeTarget "CarRentalsAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B90F42C6273C2EA700AC99DD /* Debug */,
-				B90F42C7273C2EA700AC99DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -17,6 +17,7 @@ class CarDetailCollectionViewCell: BaseCell {
     @IBOutlet weak var cardModel: UILabel!
     @IBOutlet weak var reserveCarButton: UIButton!
     weak var carReservationDelegate: CarReservationDelegate?
+    var cardId: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,17 +25,26 @@ class CarDetailCollectionViewCell: BaseCell {
     }
 
     func setupCell(cellModel: CarDetailsCellModel) {
+        cardId = cellModel.vehicleId?.description
         if let imageString = cellModel.carImage, let imageURL = URL(string: imageString) {
+            // Download image if not present in cache, else use the cached image
             carImage.downloadImageFrom(url: imageURL)
         }
-        reserveCarButton.setTitle("Reserve this car", for: .normal)
+        if let cardIdValue = cellModel.vehicleId {
+            let isCarAlreadyReserved = UserDefaults.standard.bool(forKey: cardIdValue.description)
+            reserveCarButton.isEnabled = !isCarAlreadyReserved
+        } else {
+            reserveCarButton.isEnabled = true
+        }
+        reserveCarButton.setTitle(NSLocalizedString("reserve_car_btn_title", comment: ""), for: .normal)
         carLicense.text = cellModel.license
         remainingKm.text = cellModel.remainderRange
-        noOfSeats.text = "4 seats"
-        rentalCost.text = "50¢/min"
+        noOfSeats.text = "4 seats" // hard-coded data
+        rentalCost.text = "50¢/min" // hard-coded data
         cardModel.text = cellModel.model
     }
     
+    // MARK: Add round corner and shadow around car image
     func addRoundedEdgeAndShadow() {
         carImageView.layer.cornerRadius = carImageView.frame.width/2.0
         carImageView.layer.shadowColor = UIColor.gray.cgColor
@@ -44,6 +54,10 @@ class CarDetailCollectionViewCell: BaseCell {
     }
     
     @IBAction func reserveCarButtonTapped(_ sender: Any) {
+        if let cardIdValue = cardId {
+            UserDefaults.standard.set(true, forKey: cardIdValue)
+        }
+        reserveCarButton.isEnabled = false
         carReservationDelegate?.reserveCar()
     }
 }

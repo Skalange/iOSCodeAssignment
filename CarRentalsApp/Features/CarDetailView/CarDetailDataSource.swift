@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol CollectionViewScrollDelegate: AnyObject {
-    func collectionViewScrolled()
+    func collectionViewScrolled(scrollView: UIScrollView)
 }
 
 class CarDetailDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -38,8 +38,9 @@ class CarDetailDataSource: NSObject, UICollectionViewDelegate, UICollectionViewD
         return CGSize(width: collectionView.frame.width , height: 250)
     }
     
+    //MARK: Function to identify when collection view has stopped scrolling and call a delegate method to update annotation on map based on the focused collection view row
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        delegate?.collectionViewScrolled()
+        delegate?.collectionViewScrolled(scrollView: scrollView)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -48,12 +49,4 @@ class CarDetailDataSource: NSObject, UICollectionViewDelegate, UICollectionViewD
              return
           }
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//            let cellWidth : CGFloat = collectionView.frame.width
-//
-//            let numberOfCells = floor(collectionView.frame.size.width / cellWidth)
-//            let edgeInsets = (collectionView.frame.size.width - (numberOfCells * cellWidth)) / (numberOfCells + 1)
-//
-//        return UIEdgeInsets(top: 15, left: edgeInsets, bottom: 0, right: edgeInsets)
-//        }
 }

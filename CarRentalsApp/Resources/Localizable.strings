@@ -12,3 +12,4 @@
 "location_details_loader_message" = "Fetching location details. Please wait..";
 "error_coordinate_popup_title" = "Error";
 "error_coordinate_popup_message" = "We are unable to fetch the location information currently. Please try again later";
+"reserve_car_btn_title" = "Reserve this car";

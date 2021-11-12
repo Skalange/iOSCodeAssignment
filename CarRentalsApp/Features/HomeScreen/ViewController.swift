@@ -34,6 +34,19 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    // MARK: Fixing orientation to portrait ONLY
+    override var shouldAutorotate: Bool {
+        return false
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return UIInterfaceOrientation.portrait
+    }
+    
     private func setupUI() {
         titleLabel.text = "RideCell"
         carList = viewModel?.getCarTypes()
@@ -41,7 +54,6 @@ class ViewController: UIViewController {
         carInfoCollectionView.carViewDelegate = self
         carInfoCollectionView.carReservationDelegate = self
         focusOnLocation(model: viewModel?.getCoordinatesOfAllVehicles(cellModels: carList))
-        
     }
 }
 
@@ -51,7 +63,7 @@ extension ViewController: MKMapViewDelegate {
             return
         }
         
-        // Zoom to first vehicle location
+        // MARK: Zoom to first vehicle location
         if let firstVehicleCoords = annotationModel.first?.locationCoordinate {
             let regionRadius: CLLocationDistance = 100
             let coordinateRegion = MKCoordinateRegion(center: firstVehicleCoords,
@@ -63,6 +75,7 @@ extension ViewController: MKMapViewDelegate {
         
         for model in annotationModel {
             let annotation = CustomPointAnnotation()
+            // If coordinates are invalid do not add annotation
             if model.locationCoordinate.latitude != 0.0, model.locationCoordinate.longitude != 0.0 {
                 annotation.coordinate = model.locationCoordinate
                 annotation.vehicleId = model.carId
@@ -73,6 +86,7 @@ extension ViewController: MKMapViewDelegate {
         }
     }
     
+    //  MARK: Create annotation with image for pin
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationIdentifier = "AnnotationIdentifier"
 
@@ -87,7 +101,6 @@ extension ViewController: MKMapViewDelegate {
         }
 
         if let annotationView = annotationView {
-            // Configure your annotation view here
             annotationView.canShowCallout = true
             annotationView.image = UIImage(named: "carAnnotation")
             annotationView.frame.size = CGSize(width: 80, height: 80)
@@ -95,9 +108,11 @@ extension ViewController: MKMapViewDelegate {
         return annotationView
     }
     
+    // MARK: Scroll to relevant car when annotation is selected and get address details to be displayed in the call-out bubble
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         displayLoader()
         if let annotationView = view.annotation as? CustomPointAnnotation {
+            // MARK: Fetch address details of pin location based on lat and lon
             self.getLocationDetails(location: annotationView.coordinate) { addressString in
                 self.dismiss(animated: false, completion: nil)
                 if let postalAddrString = addressString {
@@ -139,20 +154,19 @@ extension ViewController: MKMapViewDelegate {
 
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
-        //loadingIndicator.style = UIActivityIndicatorView.Style.medium
         loadingIndicator.startAnimating()
 
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension ViewController: CarViewDelegate {
+    //  MARK: scroll to respective annotation on map on scroll of collection view
     func updateMapAnnotation(index: Int) {
         let scrolledCellItem = carList?[index]
         let coordinate = CLLocationCoordinate2D(latitude: scrolledCellItem?.lat ?? 0.0, longitude: scrolledCellItem?.lon ?? 0.0)
+        // Display error pop-up if coordinates returned from back-end are invalid or nil
         if coordinate.latitude == 0.0, coordinate.longitude == 0.0 {
             let errorPopUp = PopUpView().displayPopUp(title: NSLocalizedString("error_coordinate_popup_title", comment: ""), message: NSLocalizedString("error_coordinate_popup_message", comment: ""), buttonTitle1: NSLocalizedString("ok_title", comment: ""), buttonTitle2: nil)
             self.present(errorPopUp, animated: true, completion: nil)
@@ -162,6 +176,7 @@ extension ViewController: CarViewDelegate {
 }
 
 extension ViewController: CarReservationDelegate {
+    // MARK: Pop-up to display when reserve car button is clicked
     func reserveCar() {
         let popup = PopUpView().displayPopUp(title: NSLocalizedString("reserve_car_popup_title", comment: ""), message: NSLocalizedString("reserve_car_popup_message", comment: ""), buttonTitle1: NSLocalizedString("ok_title", comment: ""), buttonTitle2: nil)
         self.present(popup, animated: true, completion: nil)
