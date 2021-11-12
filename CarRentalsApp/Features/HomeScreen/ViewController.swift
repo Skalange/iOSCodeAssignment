@@ -165,6 +165,10 @@ extension ViewController: CarViewDelegate {
     //  MARK: scroll to respective annotation on map on scroll of collection view
     func updateMapAnnotation(index: Int) {
         let scrolledCellItem = carList?[index]
+        for annotation in self.carMapView.selectedAnnotations
+        {
+            self.carMapView.deselectAnnotation(annotation, animated: true)
+        }
         let coordinate = CLLocationCoordinate2D(latitude: scrolledCellItem?.lat ?? 0.0, longitude: scrolledCellItem?.lon ?? 0.0)
         // Display error pop-up if coordinates returned from back-end are invalid or nil
         if coordinate.latitude == 0.0, coordinate.longitude == 0.0 {

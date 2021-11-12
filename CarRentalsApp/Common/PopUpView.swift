@@ -16,6 +16,5 @@ class PopUpView: UIView {
             handler: nil)
         alertController.addAction(actionOk)
         return alertController
-        //self.present(alertController, animated: true, completion: nil)
     }
 }
